@@ -54,5 +54,6 @@ public class StudentServiceTest {
 	public void testdeleteStudnet(){
 		int std = studentservice.deleteStudnet(1);
 		Assert.assertEquals(1, std);
+		System.out.println(std);
 	}
 }
