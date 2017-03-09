@@ -23,7 +23,7 @@ public class StudentServiceTest {
 	public static void tearDownAfterClass() throws Exception {
 		studentservice=null;
 	}
-
+/*
 	@Test
 	public void testselectStudentByAll() {
 		List<Student> list =studentservice.selectStudentByAll();
@@ -31,7 +31,7 @@ public class StudentServiceTest {
 			System.out.println(e);
 		}
 		Assert.assertNotNull(list);
-	}
+	}*/
 	
 /*	@Test
 	public void testinsertStudent() {
@@ -40,10 +40,15 @@ public class StudentServiceTest {
 		Assert.assertEquals(1, res);
 	}
 	*/
-	@Test
+/*	@Test
 	public void testselectStudentByNo() {
 		Student studnet =studentservice.selectStudentByNo(1);
 		Assert.assertNotNull(studnet);
+	}*/
+	@Test
+	public void testupdateStudent(){
+		int std = studentservice.updateStudent(new Student(1, "천재", "1@3.net", new Date()));
+		Assert.assertEquals(1, std);
 	}
 
 }

@@ -40,4 +40,13 @@ public class StundentService {
 		StudentDao student= sqlsesstion.getMapper(StudentDao.class);
 		return student.selectStudentByNo(studNo);
 	}
+	
+	public int updateStudent(Student student){
+		SqlSession sqlsesstion = MybatisSqlSessionFactory.opensesstion();
+		StudentDao studentdao= sqlsesstion.getMapper(StudentDao.class);
+		int res= studentdao.updateStudent(student);
+		sqlsesstion.commit();
+		return res;
+		
+	}
 }
