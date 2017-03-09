@@ -10,5 +10,5 @@ public interface StudentDao {
 	// 과제 테스트까지 완료 branch이용해서
 	Student selectStudentByNo(int studNo);
 	int updateStudent(Student student);
-/*	int deleteStudnet(int stuNo);*/
+	int deleteStudnet(int stuNo);
 }

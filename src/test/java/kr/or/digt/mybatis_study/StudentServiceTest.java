@@ -45,10 +45,14 @@ public class StudentServiceTest {
 		Student studnet =studentservice.selectStudentByNo(1);
 		Assert.assertNotNull(studnet);
 	}*/
-	@Test
+/*	@Test
 	public void testupdateStudent(){
 		int std = studentservice.updateStudent(new Student(1, "천재", "1@3.net", new Date()));
 		Assert.assertEquals(1, std);
+	}*/
+	@Test
+	public void testdeleteStudnet(){
+		int std = studentservice.deleteStudnet(1);
+		Assert.assertEquals(1, std);
 	}
-
 }
