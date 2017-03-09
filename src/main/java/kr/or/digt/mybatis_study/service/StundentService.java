@@ -49,4 +49,14 @@ public class StundentService {
 		return res;
 		
 	}
+	
+	public int deleteStudnet(int stuNo){
+		SqlSession sqlsesstion = MybatisSqlSessionFactory.opensesstion();
+		StudentDao studentdao = sqlsesstion.getMapper(StudentDao.class);
+		int res= studentdao.deleteStudnet(stuNo);
+		sqlsesstion.commit();
+		return res;
+		
+		
+	}
 }
