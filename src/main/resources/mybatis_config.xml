@@ -12,12 +12,12 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 			<dataSource type="POOLED">
 				<property name="driver" value="com.mysql.jdbc.Driver" />
 				<property name="url" value="jdbc:mysql://localhost/mybatis" />
-				<property name="username" value="$user_mybatis" />
-				<property name="password" value="$rootroot" />
+				<property name="username" value="user_mybatis" />
+				<property name="password" value="rootroot" />
 			</dataSource>
 		</environment>
 	</environments>
 	<mappers>
-		<mapper resource="kr/or/digt/mybatis_study/mapper.Studentmapper" />
+		<mapper resource="kr/or/digt/mybatis_study/mappers/Studentmapper.xml" />
 	</mappers>
 </configuration>
