@@ -33,11 +33,17 @@ public class StudentServiceTest {
 		Assert.assertNotNull(list);
 	}
 	
-	@Test
+/*	@Test
 	public void testinsertStudent() {
 		Student std= new Student(2, "이승우", "lsw@naver.com", new Date());
 		int res= studentservice.insertStudent(std);
 		Assert.assertEquals(1, res);
+	}
+	*/
+	@Test
+	public void testselectStudentByNo() {
+		Student studnet =studentservice.selectStudentByNo(1);
+		Assert.assertNotNull(studnet);
 	}
 
 }
