@@ -1,7 +1,6 @@
 package kr.or.digt.mybatis_study;
 
-import static org.junit.Assert.*;
-
+import java.util.Date;
 import java.util.List;
 
 import org.junit.AfterClass;
@@ -32,6 +31,13 @@ public class StudentServiceTest {
 			System.out.println(e);
 		}
 		Assert.assertNotNull(list);
+	}
+	
+	@Test
+	public void testinsertStudent() {
+		Student std= new Student(2, "이승우", "lsw@naver.com", new Date());
+		int res= studentservice.insertStudent(std);
+		Assert.assertEquals(1, res);
 	}
 
 }

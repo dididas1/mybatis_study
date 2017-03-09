@@ -26,4 +26,12 @@ public class StundentService {
 		return studentdao.selectStudentByAll();
 		
 	}
+	
+	public int insertStudent(Student student){
+		SqlSession sqlsesstion = MybatisSqlSessionFactory.opensesstion();
+		StudentDao studentdao= sqlsesstion.getMapper(StudentDao.class);
+		int res= studentdao.insertStudent(student);
+		sqlsesstion.commit();
+		return res;
+	}
 }
