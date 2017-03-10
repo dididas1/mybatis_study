@@ -8,7 +8,7 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-
+import kr.or.digt.mybatis_study.dto.PhoneNumber;
 import kr.or.digt.mybatis_study.dto.Student;
 import kr.or.digt.mybatis_study.service.StundentService;
 
@@ -23,16 +23,16 @@ public class StudentServiceTest {
 	public static void tearDownAfterClass() throws Exception {
 		studentservice=null;
 	}
-/*
-	@Test
+
+/*	@Test
 	public void testselectStudentByAll() {
 		List<Student> list =studentservice.selectStudentByAll();
 		for(Student e:list){
 			System.out.println(e);
 		}
 		Assert.assertNotNull(list);
-	}*/
-	
+	}
+	*/
 /*	@Test
 	public void testinsertStudent() {
 		Student std= new Student(2, "이승우", "lsw@naver.com", new Date());
@@ -40,6 +40,13 @@ public class StudentServiceTest {
 		Assert.assertEquals(1, res);
 	}
 	*/
+	
+	@Test
+	public void testinsertStudentWithPhone(){
+		Student std= new Student(1, "이승우2", "lsw@naver.com", new Date(), new PhoneNumber("010-1234-5678"));
+		int res= studentservice.insertStudentWithPhone(std);
+		Assert.assertEquals(1, res);
+	}
 /*	@Test
 	public void testselectStudentByNo() {
 		Student studnet =studentservice.selectStudentByNo(1);
@@ -50,10 +57,10 @@ public class StudentServiceTest {
 		int std = studentservice.updateStudent(new Student(1, "천재", "1@3.net", new Date()));
 		Assert.assertEquals(1, std);
 	}*/
-	@Test
+/*	@Test
 	public void testdeleteStudnet(){
 		int std = studentservice.deleteStudnet(1);
 		Assert.assertEquals(1, std);
 		System.out.println(std);
-	}
+	}*/
 }

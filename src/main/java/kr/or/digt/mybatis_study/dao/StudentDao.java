@@ -11,4 +11,5 @@ public interface StudentDao {
 	Student selectStudentByNo(int studNo);
 	int updateStudent(Student student);
 	int deleteStudnet(int stuNo);
+	int insertStudentWithPhone(Student student);  // 타입핸들러 예제
 }

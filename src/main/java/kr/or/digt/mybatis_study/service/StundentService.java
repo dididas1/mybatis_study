@@ -41,6 +41,20 @@ public class StundentService {
 		return student.selectStudentByNo(studNo);
 	}
 	
+	public int insertStudentWithPhone(Student student){
+		int res=-1;
+		try(SqlSession sqlsesstion = MybatisSqlSessionFactory.opensesstion();){
+			StudentDao studentdao= sqlsesstion.getMapper(StudentDao.class);
+			res = studentdao.insertStudentWithPhone(student);
+			sqlsesstion.commit();
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return res;
+		
+		
+	}
+	
 	public int updateStudent(Student student){
 		SqlSession sqlsesstion = MybatisSqlSessionFactory.opensesstion();
 		StudentDao studentdao= sqlsesstion.getMapper(StudentDao.class);
@@ -57,6 +71,7 @@ public class StundentService {
 		sqlsesstion.commit();
 		return res;
 		
-		
 	}
+	
+	
 }
