@@ -43,7 +43,7 @@ public class StudentServiceTest {
 	
 	@Test
 	public void testinsertStudentWithPhone(){
-		Student std= new Student(1, "이승우2", "lsw@naver.com", new Date(), new PhoneNumber("010-1234-5678"));
+		Student std= new Student(3, "이승우3", "lsw@naver.com", new Date(), new PhoneNumber("010-1234-5678"));
 		int res= studentservice.insertStudentWithPhone(std);
 		Assert.assertEquals(1, res);
 	}

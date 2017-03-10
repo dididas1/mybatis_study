@@ -24,6 +24,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		</environment>
 	</environments>
 	<mappers>
-		<mapper resource="kr/or/digt/mybatis_study/mappers/Studentmapper.xml" />
+		<!-- <mapper resource="kr/or/digt/mybatis_study/mappers/Studentmapper.xml" /> -->
+		<package name="kr.or.digt.mybatis_study.dao"/>
 	</mappers>
 </configuration>
